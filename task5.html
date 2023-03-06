@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <div class="container">
+    <h1>Задача 5. Створити окремі функції, які переводять:
+Сантиметри у дюйми;
+Кілограми у фунти;
+Кілометри у милі.
+</h1>
+    <a href="./index.html">Повернутись до задач</a>
+      <script>
+     let numberOfCustomer = parseFloat(prompt("Введить числове значення, яке буде переводитись у дюйми,фунти і милі","100"))
+     function convertToInches(numberOfCustomer) {
+        return (numberOfCustomer/2.54).toFixed(2)
+        } 
+     function convertToPounds(numberOfCustomer) {
+         return (numberOfCustomer/2.2046).toFixed(2)
+     }                  
+    function convertToMiles(numberOfCustomer) {
+         return (numberOfCustomer/1.609).toFixed(2)
+     } 
+   
+const getResultInches=convertToInches(numberOfCustomer)       
+
+const getResultPounds= convertToPounds(numberOfCustomer)
+
+const getResultMiles= convertToMiles(numberOfCustomer)
+       
+alert(`${numberOfCustomer} сантиметрів це ${getResultInches} дюймів;
+       ${numberOfCustomer} килограмів це ${getResultPounds} фунтів;
+       ${numberOfCustomer} километрів це ${getResultMiles} миль.`)
+    </script>
+ </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Задача 10. Дано покази температур (довільна кількість). Розробити
+        функцію, яка дозволить знайти середнє значення для додатних показів
+        температури.
+      </h1>
+      <a href="./index.html">Повернутись до задач</a>
+      <script>
+        function getPositiveIndicators(a) {
+          let minRange = -40;
+          let maxRange = 40;
+          let randomNumber = 0;
+          let counter = 0;
+          let sum = 0;
+          for (let i = 0; i < a; i++) {
+            randomNumber =
+              minRange + Math.floor(Math.random() * (maxRange - minRange + 1));
+            if (randomNumber > 0) {
+              counter++;
+              sum += randomNumber;
+              console.log(sum);
+            }
+            document.write(`${i + 1} значення ${randomNumber}<br>`);
+          }
+          return sum / counter;
+        }
+        let numbers = document.write(
+          getPositiveIndicators(
+            prompt("Введить будь ласка,довільну кількість значень температури")
+          ).toFixed(2)
+        );
+      </script>
+    </div>
+  </body>
+</html>
